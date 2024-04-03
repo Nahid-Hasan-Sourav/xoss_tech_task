@@ -10,8 +10,8 @@
    
 
     <title>@yield('title')</title>
-
-   @include('backend.includes.style')
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.2.1/decoupled-document/ckeditor.js"></script>
+           @include('backend.includes.style')
   </head>
 
   <body>
@@ -134,7 +134,7 @@
           </div>
         </div><!-- #messages -->
 
-        <div class="tab-pane pos-absolute a-0 mg-t-60 overflow-y-auto" id="notifications" role="tabpanel">
+        <div class="overflow-y-auto tab-pane pos-absolute a-0 mg-t-60" id="notifications" role="tabpanel">
           <div class="media-list">
             <!-- loop starts here -->
             <a href="" class="media-list-link read">
@@ -246,5 +246,6 @@
     <!-- ########## END: MAIN PANEL ########## -->
 
     @include('backend.includes.scripts')
+    @stack('js')
   </body>
 </html>
